@@ -1,0 +1,63 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Logueo</title>
+
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static '/font-awesome/css/font-awesome.css'%}" rel="stylesheet">
+
+    <link href="{% static 'css/animate.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+
+
+</head>
+
+<body class="gray-bg">
+
+    <div class="middle-box text-center loginscreen animated fadeInDown">
+        <div>
+            <div>
+
+                <h1 class="logo-name">GDC</h1>
+
+            </div>
+            <h3>Gestion De Cursos</h3>
+            <p>Sistema de registro de materias
+                <!--Continually expanded and constantly improved Inspinia Admin Them (IN+)-->
+            </p>
+            <form class="m-t" role="form" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <input class="form-control" type="text" name="username" placeholder="Usuario" >
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="password" name="password" placeholder="Contraseña" >
+                </div>
+                <button type="submit" class="btn btn-primary block full-width m-b" >Entrar</button>
+
+                <a href="#"><small>Olvido la contraseña?</small></a>
+                <p class="text-muted text-center"><small>No tienes cuenta?</small></p>
+                <a class="btn btn-sm btn-green btn-block" href="register.html">Crea una cuenta</a>
+            </form>
+            <p class="m-t"> <small>Univalle &copy; 2016</small> </p>
+        </div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src= "{% static 'js/jquery-2.1.1.js'%}"></script>
+    <script src= "{% static 'js/bootstrap.min.js'%}"></script>
+
+
+
+</body>
+
+</html>
+
